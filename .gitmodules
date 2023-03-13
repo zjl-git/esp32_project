@@ -1,0 +1,30 @@
+[submodule "kernel"]
+	path = kernel
+	url = https://github.com/espressif/esp-idf.git
+[submodule "code/drivers"]
+	path = code/drivers
+	url = https://github.com/zjl-git/esp32_driver.git
+[submodule "code/middlewares/zlog"]
+	path = code/middlewares/zlog
+	url = https://github.com/zjl-git/middleware_zlog.git
+[submodule "code/middlewares/ux"]
+	path = code/middlewares/ux
+	url = https://github.com/zjl-git/middleware_ux.git
+[submodule "code/middlewares/shell"]
+	path = code/middlewares/shell
+	url = https://github.com/zjl-git/middleware_shell.git
+[submodule "code/middlewares/atci"]
+	path = code/middlewares/atci
+	url = https://github.com/zjl-git/middleware_atci.git
+[submodule "code/peripherals/led"]
+	path = code/peripherals/led
+	url = https://github.com/zjl-git/peripheral_led.git
+[submodule "code/peripherals/key"]
+	path = code/peripherals/key
+	url = https://github.com/zjl-git/peripheral_key.git
+[submodule "code/peripherals/oled"]
+	path = code/peripherals/oled
+	url = https://github.com/zjl-git/peripheral_oled.git
+[submodule "code/peripherals/lcd"]
+	path = code/peripherals/lcd
+	url = https://github.com/zjl-git/peripheral_lcd.git

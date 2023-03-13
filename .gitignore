@@ -1,0 +1,4 @@
+/project/esp32s3/build/
+/project/esp32/build/
+/.vscode
+/tools/esp_env/

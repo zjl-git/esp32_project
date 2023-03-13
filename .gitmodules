@@ -4,9 +4,6 @@
 [submodule "code/drivers"]
 	path = code/drivers
 	url = https://github.com/zjl-git/esp32_driver.git
-[submodule "code/peripherals/led"]
-	path = code/peripherals/led
-	url = https://github.com/zjl-git/peripheral_led.git
 [submodule "code/peripherals/key"]
 	path = code/peripherals/key
 	url = https://github.com/zjl-git/peripheral_key.git
@@ -34,3 +31,6 @@
 [submodule "code/middlewares/third_party/tinymaix/src"]
 	path = code/middlewares/third_party/tinymaix/src
 	url = https://github.com/zjl-git/middleware_tinymaix.git
+[submodule "code/peripherals/led/src"]
+	path = code/peripherals/led/src
+	url = https://github.com/zjl-git/peripheral_led.git

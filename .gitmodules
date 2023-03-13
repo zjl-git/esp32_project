@@ -16,9 +16,6 @@
 [submodule "code/peripherals/lcd"]
 	path = code/peripherals/lcd
 	url = https://github.com/zjl-git/peripheral_lcd.git
-[submodule "code/middlewares/third_party/tinymaix"]
-	path = code/middlewares/third_party/tinymaix
-	url = https://github.com/zjl-git/middleware_tinymaix.git
 [submodule "code/middlewares/zlog/src"]
 	path = code/middlewares/zlog/src
 	url = https://github.com/zjl-git/middleware_zlog.git
@@ -34,3 +31,6 @@
 [submodule "code/middlewares/third_party/esp_dsp/src"]
 	path = code/middlewares/third_party/esp_dsp/src
 	url = https://github.com/zjl-git/esp32_dsp.git
+[submodule "code/middlewares/third_party/tinymaix/src"]
+	path = code/middlewares/third_party/tinymaix/src
+	url = https://github.com/zjl-git/middleware_tinymaix.git

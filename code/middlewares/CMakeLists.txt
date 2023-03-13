@@ -16,18 +16,18 @@ driver
 
 #tinymaix
 set(tinymaix_source 
-"third_party/tinymaix/src/tm_stat.c"
-"third_party/tinymaix/src/tm_model.c"
-"third_party/tinymaix/src/tm_layers.c"
-"third_party/tinymaix/src/tm_layers_O1.c"
-"third_party/tinymaix/src/tm_layers_fp8.c"
-"third_party/tinymaix/demo/mnist.c"
+"third_party/tinymaix/src/src/tm_stat.c"
+"third_party/tinymaix/src/src/tm_model.c"
+"third_party/tinymaix/src/src/tm_layers.c"
+"third_party/tinymaix/src/src/tm_layers_O1.c"
+"third_party/tinymaix/src/src/tm_layers_fp8.c"
+"third_party/tinymaix/src/demo/mnist.c"
 )
 set(tinymaix_include 
-"third_party/tinymaix/src"
-"third_party/tinymaix/include"
-"third_party/tinymaix/tmdl"
-"third_party/tinymaix/demo"
+"third_party/tinymaix/src/src"
+"third_party/tinymaix/src/include"
+"third_party/tinymaix/src/tmdl"
+"third_party/tinymaix/src/demo"
 )
 
 #dsp

@@ -7,9 +7,6 @@
 [submodule "code/peripherals/oled"]
 	path = code/peripherals/oled
 	url = https://github.com/zjl-git/peripheral_oled.git
-[submodule "code/peripherals/lcd"]
-	path = code/peripherals/lcd
-	url = https://github.com/zjl-git/peripheral_lcd.git
 [submodule "code/middlewares/zlog/src"]
 	path = code/middlewares/zlog/src
 	url = https://github.com/zjl-git/middleware_zlog.git
@@ -34,3 +31,6 @@
 [submodule "code/peripherals/key/src"]
 	path = code/peripherals/key/src
 	url = https://github.com/zjl-git/peripheral_key.git
+[submodule "code/peripherals/lcd/src"]
+	path = code/peripherals/lcd/src
+	url = https://github.com/zjl-git/peripheral_lcd.git

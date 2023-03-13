@@ -1,11 +1,11 @@
 #oled_ssd1306
 set(oled_ssd1306_source 
-"oled/ssd1306/oled_ssd1306.c"
-"oled/ssd1306/oled_ssd1306_spi_port.c"
-"oled/ssd1306/oled_ssd1306_i2c_port.c"
+"oled/src/ssd1306/oled_ssd1306.c"
+"oled/src/ssd1306/oled_ssd1306_spi_port.c"
+"oled/src/ssd1306/oled_ssd1306_i2c_port.c"
 )
 set(oled_ssd1306_include 
-"oled/ssd1306"
+"oled/src/ssd1306"
 )
 set(oled_ssd1306_requires 
 drivers
@@ -13,11 +13,11 @@ drivers
 
 #lcd_ili9341
 set(lcd_ili9341_source 
-"lcd/ili9341/lcd_ili9341.c"
-"lcd/ili9341/lcd_ili9341_port.c"
+"lcd/src/ili9341/lcd_ili9341.c"
+"lcd/src/ili9341/lcd_ili9341_port.c"
 )
 set(lcd_ili9341_include 
-"lcd/ili9341"
+"lcd/src/ili9341"
 )
 set(lcd_ili9341_requires 
 drivers

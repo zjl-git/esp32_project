@@ -31,3 +31,6 @@
 [submodule "code/middlewares/third_party/esp_dsp"]
 	path = code/middlewares/third_party/esp_dsp
 	url = https://github.com/zjl-git/esp32_dsp.git
+[submodule "code/middlewares/zlog/src"]
+	path = code/middlewares/zlog/src
+	url = https://github.com/zjl-git/middleware_zlog.git

@@ -4,9 +4,6 @@
 [submodule "code/drivers"]
 	path = code/drivers
 	url = https://github.com/zjl-git/esp32_driver.git
-[submodule "code/middlewares/zlog"]
-	path = code/middlewares/zlog
-	url = https://github.com/zjl-git/middleware_zlog.git
 [submodule "code/middlewares/ux"]
 	path = code/middlewares/ux
 	url = https://github.com/zjl-git/middleware_ux.git

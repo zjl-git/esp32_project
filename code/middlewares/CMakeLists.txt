@@ -2,14 +2,15 @@
 set(zlog_source 
 "zlog/source/zlog.c"
 "zlog/source/zlog_utils.c"
-"zlog/source/zlog_ports.c"
 "zlog/source/zlog_buf.c"
 "zlog/source/zlog_async.c"
 "zlog/demo/zlog_demo.c"
+"zlog/zlog_ports.c"
 )
 set(zlog_include 
 "zlog/include"
 "zlog/demo"
+"zlog"
 )
 set(zlog_requires 
 driver

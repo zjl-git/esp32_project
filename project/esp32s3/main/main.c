@@ -29,5 +29,5 @@ static void task1_handle(void *arg)
 
 void app_main(void)
 {
-    xTaskCreatePinnedToCore(task1_handle, "task1_handle", 4096, NULL, 3, &g_task1_handle, tskNO_AFFINITY);
+    xTaskCreatePinnedToCore(task1_handle, "task1_handle", 4096, NULL, 3, &g_task1_handle, 1);
 }

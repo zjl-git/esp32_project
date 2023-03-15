@@ -2,6 +2,8 @@
 #include "app_preproc_activity.h"
 #include "app_home_screen_idle_activity.h"
 
+#include "ux_manager.h"
+
 
 #define LOG_TAG        "apps"
 
@@ -10,9 +12,33 @@ static void zlog_assert_callback(const char* expr, const char* func, uint32_t li
     zlog_assert("ASSERT","(%s) has assert failed at %s:%ld.\n", expr, func, line);
 }
 
+extern void ux_test(void);
 static void apps_configs_module_init(void)
 {
+    ux_start();
+    ux_send_event(false, UX_ACTIVITY_EVENT_PRIORITY_LOWSET, 0, 1, NULL, 0, NULL, 0);
+    ux_send_event(false, UX_ACTIVITY_EVENT_PRIORITY_LOW, 1, 1, NULL, 0, NULL, 0);
+    ux_send_event(false, UX_ACTIVITY_EVENT_PRIORITY_MIDDLE, 2, 1, NULL, 0, NULL, 0);
+    ux_send_event(false, UX_ACTIVITY_EVENT_PRIORITY_HIGH, 3, 1, NULL, 0, NULL, 0);
+    ux_send_event(false, UX_ACTIVITY_EVENT_PRIORITY_HIGHEST, 4, 1, NULL, 0, NULL, 0);
+    ux_send_event(false, UX_ACTIVITY_EVENT_PRIORITY_SYSTEM, 5, 1, NULL, 0, NULL, 0);
 
+    ux_send_event(false, UX_ACTIVITY_EVENT_PRIORITY_LOWSET, 0, 2, NULL, 0, NULL, 0);
+    ux_send_event(false, UX_ACTIVITY_EVENT_PRIORITY_LOW, 1, 2, NULL, 0, NULL, 0);
+    ux_send_event(false, UX_ACTIVITY_EVENT_PRIORITY_MIDDLE, 2, 2, NULL, 0, NULL, 0);
+    ux_send_event(false, UX_ACTIVITY_EVENT_PRIORITY_HIGH, 3, 2, NULL, 0, NULL, 0);
+    ux_send_event(false, UX_ACTIVITY_EVENT_PRIORITY_HIGHEST, 4, 2, NULL, 0, NULL, 0);
+
+    ux_remove_event(4, 1);
+    ux_remove_event(4, 2);
+
+    ux_remove_event(0, 2);
+    ux_remove_event(1, 2);
+    ux_remove_event(2, 2);
+    ux_remove_event(3, 2);
+    ux_remove_event(5, 1);
+
+    // ux_test();
 }
 
 static void task_def_create(void)

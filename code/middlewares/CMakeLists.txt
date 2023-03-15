@@ -14,6 +14,21 @@ set(zlog_requires
 driver
 )
 
+#ux
+set(ux_source 
+"ux/src/source/ux_message_queue.c"
+"ux/src/source/ux_manager.c"
+"ux/src/source/ux_message_handler.c"
+"ux/ux_ports.c"
+)
+set(ux_include 
+"ux/src/include"
+"ux"
+)
+set(ux_requires 
+driver
+)
+
 #tinymaix
 set(tinymaix_source 
 "third_party/tinymaix/src/src/tm_stat.c"
@@ -183,12 +198,15 @@ set(dsp_priv_include_dirs
 
 
 idf_component_register(SRCS ${zlog_source}
+                            ${ux_source}
                             ${tinymaix_source}
                             ${dsp_source}
                        INCLUDE_DIRS ${zlog_include}
+                                    ${ux_include}
                                     ${tinymaix_include}
                                     ${dsp_include}
                        REQUIRES ${zlog_requires}
+                                ${ux_requires}
                        PRIV_INCLUDE_DIRS ${dsp_priv_include_dirs}
                       )
 target_compile_options(${COMPONENT_LIB} PRIVATE "-Wno-format")

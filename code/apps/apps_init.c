@@ -16,7 +16,7 @@ extern void ux_test(void);
 static void apps_configs_module_init(void)
 {
     ux_start();
-    ux_send_event(false, UX_ACTIVITY_EVENT_PRIORITY_LOWSET, 0, 1, NULL, 0, NULL, 0);
+    ux_send_event(false, UX_ACTIVITY_EVENT_PRIORITY_LOWSET, 0, 1, NULL, 0, NULL, );
     ux_send_event(false, UX_ACTIVITY_EVENT_PRIORITY_LOW, 1, 1, NULL, 0, NULL, 0);
     ux_send_event(false, UX_ACTIVITY_EVENT_PRIORITY_MIDDLE, 2, 1, NULL, 0, NULL, 0);
     ux_send_event(false, UX_ACTIVITY_EVENT_PRIORITY_HIGH, 3, 1, NULL, 0, NULL, 0);

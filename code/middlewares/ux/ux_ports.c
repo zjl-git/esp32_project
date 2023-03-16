@@ -52,14 +52,14 @@ uint32_t ux_ports_semaphore_take(void *semaphore, uint32_t block_time)
     if (block_time == UX_PORT_MAX_DELAY) {
         return xSemaphoreTake(semaphore, portMAX_DELAY);
     } else {
-        return xSemaphoreTake(semaphore, block_time);
+        return xSemaphoreTake(semaphore, (TickType_t)block_time / portTICK_PERIOD_MS);
     }
 }
 
 
 uint32_t ux_ports_get_currents_ms(void)
 {
-    return xTaskGetTickCount();
+    return xTaskGetTickCount() * portTICK_PERIOD_MS;
 }
 
 void ux_ports_create_task(ux_ports_task_handler task_func, char *task_name, 

@@ -19,6 +19,7 @@ set(ux_source
 "ux/src/source/ux_message_queue.c"
 "ux/src/source/ux_message_delay_queue.c"
 "ux/src/source/ux_manager.c"
+"ux/src/source/ux_activity.c"
 "ux/src/source/ux_message_handler.c"
 "ux/ux_ports.c"
 )

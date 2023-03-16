@@ -10,13 +10,21 @@ extern "C" {
 #include <string.h>
 #include <stddef.h>
 
+#define UX_ON_OFF                   0
+
+#if  UX_ON_OFF
 #include "zlog.h"
 #define UX_LOG_TAG                  "UX"
-
 #define UX_LOG_E(msg, ...)          zlog_error(UX_LOG_TAG, msg, ##__VA_ARGS__)
 #define UX_LOG_W(msg, ...)          zlog_warn(UX_LOG_TAG, msg, ##__VA_ARGS__)
 #define UX_LOG_I(msg, ...)          zlog_info(UX_LOG_TAG, msg, ##__VA_ARGS__)
 #define UX_LOG_D(msg, ...)          zlog_debug(UX_LOG_TAG, msg, ##__VA_ARGS__)
+#else
+#define UX_LOG_E(msg, ...)
+#define UX_LOG_W(msg, ...)
+#define UX_LOG_I(msg, ...)
+#define UX_LOG_D(msg, ...)
+#endif
 
 #define UX_PORTS_TASK_PRIO          1
 

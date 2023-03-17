@@ -10,7 +10,7 @@ extern "C" {
 #include <string.h>
 #include <stddef.h>
 
-#define UX_ON_OFF                   0
+#define UX_ON_OFF                   1
 
 #if  UX_ON_OFF
 #include "zlog.h"

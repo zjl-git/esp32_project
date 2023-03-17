@@ -28,7 +28,7 @@ extern "C" {
 
 #define ZLOG_FILTER_TAG_LEVEL_MAX_NUM           20
 
-#define ZLOG_NEWLINE_SIGN                       "\n"
+#define ZLOG_NEWLINE_SIGN                       " "
 
 /*---------------------------------------------------------------------------*/
 

@@ -34,3 +34,6 @@
 [submodule "code/peripherals/oled/src"]
 	path = code/peripherals/oled/src
 	url = https://github.com/zjl-git/peripheral_oled.git
+[submodule "code/middlewares/sim_commu/src"]
+	path = code/middlewares/sim_commu/src
+	url = https://github.com/zjl-git/middleware_sim_commu.git

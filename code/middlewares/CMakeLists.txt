@@ -31,6 +31,14 @@ set(ux_requires
 driver
 )
 
+#minilzo
+set(minilzo_source 
+"third_party/minilzo/src/minilzo.c"
+)
+set(minilzo_include 
+"third_party/minilzo/src"
+)
+
 #tinymaix
 set(tinymaix_source 
 "third_party/tinymaix/src/src/tm_stat.c"
@@ -201,10 +209,12 @@ set(dsp_priv_include_dirs
 
 idf_component_register(SRCS ${zlog_source}
                             ${ux_source}
+                            ${minilzo_source}
                             ${tinymaix_source}
                             ${dsp_source}
                        INCLUDE_DIRS ${zlog_include}
                                     ${ux_include}
+                                    ${minilzo_include}
                                     ${tinymaix_include}
                                     ${dsp_include}
                        REQUIRES ${zlog_requires}

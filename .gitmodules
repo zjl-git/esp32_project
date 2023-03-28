@@ -37,3 +37,6 @@
 [submodule "code/middlewares/sim_commu/src"]
 	path = code/middlewares/sim_commu/src
 	url = https://github.com/zjl-git/middleware_sim_commu.git
+[submodule "code/middlewares/third_party/minilzo/src"]
+	path = code/middlewares/third_party/minilzo/src
+	url = https://github.com/zjl-git/middleware_minilzo.git

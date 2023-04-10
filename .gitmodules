@@ -40,3 +40,6 @@
 [submodule "code/middlewares/third_party/minilzo/src"]
 	path = code/middlewares/third_party/minilzo/src
 	url = https://github.com/zjl-git/middleware_minilzo.git
+[submodule "code/peripherals/flash/src"]
+	path = code/peripherals/flash/src
+	url = https://github.com/zjl-git/peripheral_flash.git

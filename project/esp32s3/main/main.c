@@ -15,7 +15,6 @@ static void task1_handle(void *arg)
     // demo_ble_ext_advertise_init();
     // demo_ble_gatt_server_init();
     // demo_ble_gatt_client_init();
-
     // test_mnist(0, NULL);
 
     apps_init();

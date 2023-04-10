@@ -5,6 +5,11 @@
 #include "ux_manager.h"
 #include "minilzo.h"
 
+#include "hl_uart.h"
+#include "hl_i2c.h"
+#include "hl_simulate_i2c.h"
+#include "hl_spi.h"
+
 #define LOG_TAG        "apps"
 
 /******************************************************************************/
@@ -64,7 +69,7 @@ static void zlog_assert_callback(const char* expr, const char* func, uint32_t li
     zlog_assert("ASSERT","(%s) has assert failed at %s:%ld.\n", expr, func, line);
 }
 
-static void apps_configs_module_init(void)
+static void apps_module_init(void)
 {
     ux_set_pre_proc_func(app_preproc_activity);
     ux_start_activity(NULL, app_home_screen_idle_activity, UX_ACTIVITY_PRIORITY_IDLE_BACKGROUND, NULL, 0);
@@ -93,13 +98,26 @@ static void system_init(void)
 
 }
 
+static void board_init(void)
+{
+    hl_uart_init(HL_UART_PORT2, 115200);
+
+    hl_spi_master_init(HL_SPI2);
+
+    // hl_simulate_i2c_init();
+
+    // hl_i2c_init();
+}
+
 void apps_init(void)
 {
+    board_init();
+
     system_init();
 
     log_init();
 
-    apps_configs_module_init();
+    // apps_module_init();
 
     if (lzo_init() != LZO_E_OK) {
         APPS_LOG_E(LOG_TAG, "minilzo init fail!!!");
@@ -107,5 +125,7 @@ void apps_init(void)
 
     APPS_LOG_D(LOG_TAG, "apps init complete");
 
-    xTaskCreatePinnedToCore(test_task_handle, "test_task_handle", 4096, NULL, 3, &g_test_task_handle, 1);
+    hl_uart_write(HL_UART_PORT2, (uint8_t *)"apps init complete", strlen("apps init complete"));
+
+    // xTaskCreatePinnedToCore(test_task_handle, "test_task_handle", 4096, NULL, 3, &g_test_task_handle, 1);
 }

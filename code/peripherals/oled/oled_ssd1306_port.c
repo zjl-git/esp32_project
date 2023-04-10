@@ -50,7 +50,6 @@ void oled_ssd1306_port_init(void)
     hl_gpio_init(OLCD_CS_PIN, HL_GPIO_MODE_OUTPUT, HL_GPIO_INTR_DISABLE, false, true);
     hl_gpio_init(OLCD_REST_PIN, HL_GPIO_MODE_OUTPUT, HL_GPIO_INTR_DISABLE, false, true);
 
-    hl_spi_master_init(HL_SPI2);
     hl_spi_master_add_device(HL_SPI2_DEVICE1, -1);
 
     oled_ssd1306_port_delay(10);

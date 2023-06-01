@@ -100,7 +100,7 @@ static void system_init(void)
 
 static void board_init(void)
 {
-    hl_uart_init(HL_UART_PORT2, 115200);
+    hl_uart_init(HL_UART_PORT1, 115200);
 
     hl_spi_master_init(HL_SPI2);
 
@@ -124,8 +124,5 @@ void apps_init(void)
     }
 
     APPS_LOG_D(LOG_TAG, "apps init complete");
-
-    hl_uart_write(HL_UART_PORT2, (uint8_t *)"apps init complete", strlen("apps init complete"));
-
     // xTaskCreatePinnedToCore(test_task_handle, "test_task_handle", 4096, NULL, 3, &g_test_task_handle, 1);
 }

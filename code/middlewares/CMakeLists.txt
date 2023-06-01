@@ -14,6 +14,20 @@ set(zlog_requires
 driver
 )
 
+#atci
+set(atci_source 
+"atci/src/source/atci.c"
+"atci/src/source/atci_handler.c"
+"atci/atci_ports.c"
+)
+set(atci_include 
+"atci/src/include"
+"atci"
+)
+set(atci_requires 
+driver
+)
+
 #ux
 set(ux_source 
 "ux/src/source/ux_message_queue.c"
@@ -208,16 +222,19 @@ set(dsp_priv_include_dirs
 
 
 idf_component_register(SRCS ${zlog_source}
+                            ${atci_source}
                             ${ux_source}
                             ${minilzo_source}
                             ${tinymaix_source}
                             ${dsp_source}
                        INCLUDE_DIRS ${zlog_include}
+                                    ${atci_include}
                                     ${ux_include}
                                     ${minilzo_include}
                                     ${tinymaix_include}
                                     ${dsp_include}
                        REQUIRES ${zlog_requires}
+                                ${atci_requires}
                                 ${ux_requires}
                        PRIV_INCLUDE_DIRS ${dsp_priv_include_dirs}
                       )
